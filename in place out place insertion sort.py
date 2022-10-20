@@ -1,3 +1,6 @@
+#Name: Navodit Gupta
+#SID: 21107082
+#Branch: Mechanical
 """
 Ans 1.
 An "In-Place" sorting algorithm is algorithm whose space complexity
@@ -8,6 +11,9 @@ contains the data by transforming the input ‘in-place’.Where as an
 "Out-Place" sorting algorithm is algorithm whose space complexity is 
 greater than O(logn).
 """
+#Ans 2.
+
+#Insertion Sort Using In-Place Algorithm
 def insertion_sort_IP(arr,n):
     for i in range(1,n):
         key = arr[i]
@@ -17,7 +23,7 @@ def insertion_sort_IP(arr,n):
             j -= 1
             arr[j + 1] = key
 
-
+#Insertion Sort Using Out-Place Algorithm
 def insertion_sort_OP(arr,si,ei):
     if si == ei:
         return
@@ -34,7 +40,7 @@ def insertion_sort_OP(arr,si,ei):
         if arr[si]<=temp:
             arr[si+1]=temp
             break
-
+#function to print array
 def pfun(arr,n):
     for k in range(n):
         print(arr[k],end=' ')
@@ -43,7 +49,7 @@ arr = []
 arr2 = []
 
 n = int(input("Enter number of elements in array: "))
-#a = print("Enter elements of array one by one:")
+
 for i in range(n):
     a = int(input("Enter elements of array one by one:"))
     arr.append(a)
